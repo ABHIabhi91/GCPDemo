@@ -36,7 +36,7 @@ public String sendData() throws IOException {
 		BlobInfo info=BlobInfo.newBuilder(id).build();
 		
 		ClassLoader classLoader = getClass().getClassLoader();
-        URL resource = classLoader.getResource("demofile");
+        URL resource = classLoader.getResource("demofile.txt");
         
         if (resource == null) {
             throw new IllegalArgumentException("file is not found!");
@@ -47,9 +47,9 @@ public String sendData() throws IOException {
     		storage.create(info,array);
         }
 		
-//		File file =new File("Users/abhisheksingh/Downloads","demofile.txt");
-//		byte[] array=Files.readAllBytes(Paths.get(file.toURI()));
-//		storage.create(info,array);
+		File file =new File("Users/abhisheksingh/Downloads","demofile.txt");
+		byte[] array=Files.readAllBytes(Paths.get(file.toURI()));
+		storage.create(info,array);
 		return "File uploaded Successfully";
 	}
 }
