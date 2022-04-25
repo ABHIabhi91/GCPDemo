@@ -37,7 +37,7 @@ public String sendData() throws IOException {
 		
 		ClassLoader classLoader = getClass().getClassLoader();
         URL resource = classLoader.getResource("demofile.txt");
-        
+        System.out.println("resource::::"+resource);
         if (resource == null) {
             throw new IllegalArgumentException("file is not found!");
         } else {
@@ -46,10 +46,6 @@ public String sendData() throws IOException {
     		byte[] array=Files.readAllBytes(Paths.get(file.toURI()));
     		storage.create(info,array);
         }
-		
-		File file =new File("Users/abhisheksingh/Downloads","demofile.txt");
-		byte[] array=Files.readAllBytes(Paths.get(file.toURI()));
-		storage.create(info,array);
 		return "File uploaded Successfully";
 	}
 }
