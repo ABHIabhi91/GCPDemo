@@ -21,8 +21,12 @@ import com.google.cloud.storage.Storage;
 @RequestMapping("/gcp")
 public class GcpStorageDemo {
 
+	
+
+	
 	@Autowired
 	private Storage storage;
+	
 
 	@GetMapping("send-data")
 	public String sendData() throws IOException {
@@ -44,6 +48,12 @@ public class GcpStorageDemo {
 		}
 		return "File uploaded Successfully";
 	}
+	
+	
+
+
+
+	
 
 	@GetMapping("get-data")
 	public String getData() throws IOException {
