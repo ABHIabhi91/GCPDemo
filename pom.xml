@@ -70,7 +70,7 @@
 				<artifactId>appengine-maven-plugin</artifactId>
 				<version>2.4.0</version>
 				<configuration>
-					<deploy.projectId>gcp-image-hosting</deploy.projectId>
+					<deploy.projectId>intense-arbor-349007</deploy.projectId>
 					<deploy.version>GCLOUD_CONFIG</deploy.version>
 				</configuration>
 			</plugin>
